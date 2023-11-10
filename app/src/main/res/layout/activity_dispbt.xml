@@ -21,7 +21,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/idBtnOnBT"
+                android:id="@+id/btnEnableBluetooth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -33,11 +33,11 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnDisableBluetooth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="desactivar" />
+                android:text="DESACTIVAR" />
         </LinearLayout>
 
         <LinearLayout
@@ -46,104 +46,61 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnUpdateList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="buscar" />
+                android:text="Buscar" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spinnerDevices"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:contentDescription="dispositivos" />
+                android:contentDescription="Dispositivos BT"
+                android:contextClickable="false" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnConnect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="conectar" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Conectar" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="on" />
-
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="off" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="on" />
-
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="off" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editTextMessage"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:ems="10"
             android:inputType="text"
-            android:text="Name" />
+            android:text="Ingresa mensaje" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/btnSendMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="enviar" />
+            android:text="Enviar" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
