@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Titulos">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">#00FFFFFF</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center|center_horizontal</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Otros atributos del tema -->
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+</resources>

@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="button">#C456B8A1</color>
+    <color name="fondo">#9AF2FA</color>
+    <color name="fondoTabla">#433B2E</color>
 </resources>

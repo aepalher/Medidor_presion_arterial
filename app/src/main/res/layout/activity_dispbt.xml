@@ -4,103 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:backgroundTintMode="screen"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="328dp"
-        android:layout_height="609dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Titulos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conexión a Bluetooth"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <Button
+        android:id="@+id/btnUpdateList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <Button
+        android:id="@+id/btnEnableBluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hapticFeedbackEnabled="false"
+        android:text="ACTIVAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.172" />
 
-            <Button
-                android:id="@+id/btnEnableBluetooth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="ACTIVAR" />
+    <Button
+        android:id="@+id/btnDisableBluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="DESACTIVAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.172" />
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="345dp"
+        android:layout_height="316dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.609" />
 
-            <Button
-                android:id="@+id/btnDisableBluetooth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="DESACTIVAR" />
-        </LinearLayout>
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="263dp"
+        android:layout_height="51dp"
+        android:text="CONECTAR"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.894" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnUpdateList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Buscar" />
-
-            <Spinner
-                android:id="@+id/spinnerDevices"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:contentDescription="Dispositivos BT"
-                android:contextClickable="false" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btnConnect"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Conectar" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/editTextMessage"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Ingresa mensaje" />
-
-        <Button
-            android:id="@+id/btnSendMessage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Enviar" />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

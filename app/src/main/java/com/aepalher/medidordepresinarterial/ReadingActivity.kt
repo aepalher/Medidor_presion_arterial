@@ -24,7 +24,7 @@ class ReadingActivity : AppCompatActivity() {
             val fechaHoraActual = Date()
             val fechaHoraFormateada = formatoFechaHora.format(fechaHoraActual)
 
-            textViewFechaHora.text = "Fecha y Hora Actual: $fechaHoraFormateada"
+            textViewFechaHora.text = "Fecha y Hora: $fechaHoraFormateada"
 
             handler.postDelayed(this, 1000)
         }

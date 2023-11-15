@@ -4,6 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo"
     tools:context=".RecommendationsActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/Titulos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recomendaciones"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/textViewRecomendaciones"
+        android:layout_width="328dp"
+        android:layout_height="619dp"
+        android:gravity="fill_vertical"
+        android:text="1. Consulta Regular con tu Médico:\n- Programa chequeos regulares con tu médico para monitorear tu presión arterial y ajustar el tratamiento según sea necesario.\n2. Mantén un Peso Saludable:\n- Mantener un peso saludable puede ayudar a reducir la presión arterial. Tu médico puede sugerir un rango de peso objetivo basado en tu altura y otros factores.\n3. Adopta una Dieta Saludable:\n- Reduce la ingesta de sodio (sal) en tu dieta.\n- Aumenta el consumo de frutas, verduras, granos enteros, pescado, aves y frutos secos.\n- Limita el consumo de grasas saturadas y grasas trans.\n4. Haz Ejercicio Regularmente:\n- Realiza actividad física regularmente, al menos 150 minutos de actividad aeróbica moderada o 75 minutos de actividad vigorosa por semana, junto con ejercicios de fortalecimiento muscular al menos dos veces por semana.\n5. Limita el Consumo de Alcohol:\n- Si consumes alcohol, hazlo con moderación. Esto significa hasta una bebida al día para las mujeres y hasta dos bebidas al día para los hombres.\n6. Deja de Fumar:\n- Dejar de fumar puede mejorar significativamente la salud cardiovascular. Pide ayuda a tu médico si es necesario.\n7. Gestión del Estrés:\n- Encuentra formas efectivas de gestionar el estrés, como la meditación, la respiración profunda, el yoga o la actividad física.\n8. Limita la Cafeína:\n- Limita la ingesta de cafeína, ya que puede tener efectos temporales sobre la presión arterial.\n9. Cumple con la Medicación:\n- Si se te ha recetado medicación para la hipertensión, tómala según las indicaciones de tu médico.\n10. Monitoreo en Casa:\n- Considera la posibilidad de monitorear tu presión arterial en casa si tu médico lo recomienda. Esto puede proporcionar información valiosa sobre cómo responde tu presión arterial a ciertos factores y a la medicación.\n"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
 </androidx.constraintlayout.widget.ConstraintLayout>
