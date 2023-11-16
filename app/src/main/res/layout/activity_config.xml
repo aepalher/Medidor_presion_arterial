@@ -14,6 +14,7 @@
         android:layout_height="29dp"
         android:layout_marginBottom="8dp"
         android:text="Configuración de aplicación"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +39,7 @@
             android:layout_height="75dp"
             android:scrollbarSize="10dp"
             android:text="Alertas diarias"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <Switch
@@ -45,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:text="Conexión automática"
+            android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

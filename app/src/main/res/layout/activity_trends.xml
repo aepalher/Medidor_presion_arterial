@@ -35,6 +35,7 @@
         android:layout_marginBottom="642dp"
         android:gravity="center|center_horizontal"
         android:text="Gráfico de tendencias"
+        android:textColor="@color/black"
         android:textSize="20sp" />
 
 </RelativeLayout>

@@ -14,10 +14,31 @@ class TrendsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trends)
 
+        //Inicio del código
         val lineChart: LineChart = findViewById(R.id.lineChart)
 
         // Datos de ejemplo (reemplazar esto con datos del dispositivo)
         val medidasPresionArterial = listOf(
+            PresionArterial(System.currentTimeMillis() - 40 * 86400000, 122f, 60f),
+            PresionArterial(System.currentTimeMillis() - 39 * 86400000, 118f, 70f),
+            PresionArterial(System.currentTimeMillis() - 38 * 86400000, 120f, 65f),
+            PresionArterial(System.currentTimeMillis() - 37 * 86400000, 115f, 85f),
+            PresionArterial(System.currentTimeMillis() - 36 * 86400000, 110f, 84f),
+            PresionArterial(System.currentTimeMillis() - 35 * 86400000, 117f, 87f),
+            PresionArterial(System.currentTimeMillis() - 34 * 86400000, 125f, 85f),
+            PresionArterial(System.currentTimeMillis() - 33 * 86400000, 130f, 90f),
+            PresionArterial(System.currentTimeMillis() - 32 * 86400000, 123f, 85f),
+            PresionArterial(System.currentTimeMillis() - 31 * 86400000, 129f, 80f),
+            PresionArterial(System.currentTimeMillis() - 30 * 86400000, 130f, 90f),
+            PresionArterial(System.currentTimeMillis() - 29 * 86400000, 128f, 91f),
+            PresionArterial(System.currentTimeMillis() - 28 * 86400000, 123f, 84f),
+            PresionArterial(System.currentTimeMillis() - 27 * 86400000, 120f, 86f),
+            PresionArterial(System.currentTimeMillis() - 26 * 86400000, 118f, 79f),
+            PresionArterial(System.currentTimeMillis() - 25 * 86400000, 115f, 78f),
+            PresionArterial(System.currentTimeMillis() - 24 * 86400000, 120f, 80f),
+            PresionArterial(System.currentTimeMillis() - 23 * 86400000, 127f, 85f),
+            PresionArterial(System.currentTimeMillis() - 22 * 86400000, 127f, 85f),
+            PresionArterial(System.currentTimeMillis() - 21 * 86400000, 125f, 87f),
             PresionArterial(System.currentTimeMillis() - 20 * 86400000, 122f, 60f),
             PresionArterial(System.currentTimeMillis() - 19 * 86400000, 118f, 70f),
             PresionArterial(System.currentTimeMillis() - 18 * 86400000, 120f, 65f),
@@ -50,12 +71,13 @@ class TrendsActivity : AppCompatActivity() {
             entriesDiastolica.add(Entry(index.toFloat(), medida.diastolica))
         }
 
+        // Color de las Leyendas
         val dataSetSistolica = LineDataSet(entriesSistolica, "Presión Sistólica")
         dataSetSistolica.color = Color.BLUE
         dataSetSistolica.valueTextColor = Color.BLACK
 
         val dataSetDiastolica = LineDataSet(entriesDiastolica, "Presión Diastólica")
-        dataSetDiastolica.color = Color.RED
+        dataSetDiastolica.color = Color.MAGENTA
         dataSetDiastolica.valueTextColor = Color.BLACK
 
         // Configuración del gráfico

@@ -24,6 +24,7 @@
         android:layout_width="251dp"
         android:layout_height="45dp"
         android:text="Lectura de presión arterial"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,17 +33,18 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="271dp"
-        android:layout_height="66dp"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
         android:backgroundTint="@color/button"
         android:gravity="center_horizontal|fill_vertical"
         android:text="Guardar medición"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.889"
+        app:layout_constraintVertical_bias="0.9"
         app:strokeWidth="2dp" />
 
     <EditText
@@ -53,6 +55,7 @@
         android:background="#00FFFFFF"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.733"
@@ -70,6 +73,7 @@
         android:gravity="center_horizontal"
         android:inputType="text"
         android:text="Pulso"
+        android:textColor="@color/black"
         android:textIsSelectable="false"
         android:textSize="45sp"
         android:textStyle="bold"
@@ -88,6 +92,7 @@
         android:background="#00FFFFFF"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.733"
@@ -100,7 +105,6 @@
         android:layout_width="110dp"
         android:layout_height="70dp"
         android:layout_marginBottom="28dp"
-        android:autoText="false"
         android:background="#00FFFFFF"
         android:contextClickable="false"
         android:ems="10"
@@ -108,6 +112,7 @@
         android:inputType="text"
         android:text="SIS"
         android:textAllCaps="false"
+        android:textColor="@color/black"
         android:textIsSelectable="false"
         android:textSize="60sp"
         android:textStyle="bold"
@@ -126,6 +131,7 @@
         android:background="#00FFFFFF"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.733"
@@ -151,7 +157,8 @@
         app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.425"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/textView6"
@@ -159,6 +166,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Fecha y Hora:"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
