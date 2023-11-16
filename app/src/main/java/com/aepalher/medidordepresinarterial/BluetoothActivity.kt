@@ -47,6 +47,7 @@ class BluetoothActivity : AppCompatActivity() {
         val idBtnOffBT = findViewById<Button>(R.id.btnDisableBluetooth)
         val idBtnConect = findViewById<Button>(R.id.btnConnect)
         val idBtnDispBT = findViewById<Button>(R.id.btnUpdateList)
+        val idSpinDisp = findViewById<Spinner>(R.id.spinner)
 
 
 
@@ -63,11 +64,11 @@ class BluetoothActivity : AppCompatActivity() {
         //Inicializacion del bluetooth adapter
         mBtAdapter = (getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager).adapter
 
-        //Checar si esta encendido o apagado
+        //Revisar si esta encendido o apagado
         if (mBtAdapter == null) {
             Toast.makeText(this, "Bluetooth no está disponible en este dipositivo", Toast.LENGTH_LONG).show()
-        } else {
-            Toast.makeText(this, "Bluetooth está disponible en este dispositivo", Toast.LENGTH_LONG).show()
+        } else if(mBtAdapter != null && !mBtAdapter.isEnabled) {
+            Toast.makeText(this, "Bluetooth listo para activar!", Toast.LENGTH_LONG).show()
         }
         //--------------------------------------------------
         //--------------------------------------------------
@@ -115,14 +116,12 @@ class BluetoothActivity : AppCompatActivity() {
                     val deviceName = device.name
                     val deviceHardwareAddress = device.address // MAC address
                     mAddressDevices!!.add(deviceHardwareAddress)
-                    //........... EN ESTE PUNTO GUARDO LOS NOMBRE A MOSTRARSE EN EL COMBO BOX
                     mNameDevices!!.add(deviceName)
                 }
-
                 //ACTUALIZO LOS DISPOSITIVOS
-                //idSpinDisp.setAdapter(mNameDevices)
+                idSpinDisp.setAdapter(mNameDevices)
             } else {
-                val noDevices = "Ningun dispositivo pudo ser emparejado"
+                val noDevices = "Ningún dispositivo encontrado!"
                 mAddressDevices!!.add(noDevices)
                 mNameDevices!!.add(noDevices)
                 Toast.makeText(this, "Primero vincule un dispositivo bluetooth", Toast.LENGTH_LONG).show()
@@ -132,12 +131,13 @@ class BluetoothActivity : AppCompatActivity() {
         idBtnConect.setOnClickListener {
             try {
                 if (m_bluetoothSocket == null || !m_isConnected) {
-
-                    //val IntValSpin = idSpinDisp.selectedItemPosition
-                    //m_address = mAddressDevices!!.getItem(IntValSpin).toString()
-                    Toast.makeText(this,m_address,Toast.LENGTH_LONG).show()
+                    val IntValSpin = idSpinDisp.selectedItemPosition
+                    val valName = idSpinDisp.selectedItem.toString()
+                    m_address = mAddressDevices!!.getItem(IntValSpin).toString()
+                    Toast.makeText(this,"CONECTANDO A :\nNombre: "+valName+"\n Address: "+m_address,Toast.LENGTH_LONG).show()
                     // Cancel discovery because it otherwise slows down the connection.
                     mBtAdapter?.cancelDiscovery()
+
                     val device: BluetoothDevice = mBtAdapter.getRemoteDevice(m_address)
                     m_bluetoothSocket = device.createInsecureRfcommSocketToServiceRecord(m_myUUID)
                     m_bluetoothSocket!!.connect()
@@ -147,7 +147,6 @@ class BluetoothActivity : AppCompatActivity() {
                 Log.i("MainActivity", "CONEXION EXITOSA")
 
             } catch (e: IOException) {
-                //connectSuccess = false
                 e.printStackTrace()
                 Toast.makeText(this,"ERROR DE CONEXION",Toast.LENGTH_LONG).show()
                 Log.i("MainActivity", "ERROR DE CONEXION")

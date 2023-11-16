@@ -13,7 +13,6 @@
     </style>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light">
-        <!-- Otros atributos del tema -->
         <item name="android:forceDarkAllowed">false</item>
     </style>
 

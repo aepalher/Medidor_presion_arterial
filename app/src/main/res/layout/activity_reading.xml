@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="0.9"
         app:strokeWidth="2dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextNumberDecimal4"
         android:layout_width="150dp"
         android:layout_height="60dp"
@@ -55,7 +55,10 @@
         android:background="#00FFFFFF"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:text="123.456"
         android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.733"
@@ -70,7 +73,7 @@
         android:background="#00FFFFFF"
         android:ems="10"
         android:freezesText="false"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:inputType="text"
         android:text="Pulso"
         android:textColor="@color/black"
@@ -84,15 +87,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.55" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextNumberDecimal2"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:background="#00FFFFFF"
         android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
         android:inputType="numberDecimal"
+        android:text="123.456"
         android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.733"
@@ -108,7 +115,7 @@
         android:background="#00FFFFFF"
         android:contextClickable="false"
         android:ems="10"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:inputType="text"
         android:text="SIS"
         android:textAllCaps="false"
@@ -123,15 +130,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.325" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextNumberDecimal"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:background="#00FFFFFF"
         android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
         android:inputType="numberDecimal"
+        android:text="123.456"
         android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.733"
@@ -146,9 +157,10 @@
         android:background="#00FFFFFF"
         android:ems="10"
         android:freezesText="false"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:inputType="text"
         android:text="DIA"
+        android:textColor="@color/black"
         android:textIsSelectable="false"
         android:textSize="60sp"
         android:textStyle="bold"
@@ -157,8 +169,7 @@
         app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425"
-        android:textColor="@color/black" />
+        app:layout_constraintVertical_bias="0.425" />
 
     <TextView
         android:id="@+id/textView6"
